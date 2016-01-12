@@ -4,7 +4,9 @@ block content
   div.mosaic
     if pictures
       for image in pictures
-        img.image(src= image.image)
+        a(href='#')
+          img.image(src= image.image)
+          span delete image
   div.form
     form.input(action='/' method ='POST')
       input(type='text' name='image' id='image_input' placeholder="paste image link")

@@ -33,3 +33,33 @@ a {
 .image:hover{
   opacity: .80;
 }
+
+#container {
+  width: 600px;
+  margin: 50px auto;
+}
+
+a {
+  float: left;
+  position: relative;
+}
+
+a img {
+  display: block;
+}
+
+a span {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #ddd;
+  padding: 20px;
+}
+
+a:hover span {
+  display: block;
+}
