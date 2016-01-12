@@ -14,14 +14,25 @@ function getImages(){
 /* GET home page. */
 router.get('/', function(req, res, next) {
   getImages().select().then(function(result){
-      console.log('**************');
-      console.log(result);
+
+
 
       res.render('index', {pictures: result})
   })
+});
 
+
+
+router.post('/', function(req, res, next){
+  var image = req.body
+  getImages().insert(image).then(function(result){
+    res.redirect('/')
+  })
 
 
 });
+
+
+
 
 module.exports = router;

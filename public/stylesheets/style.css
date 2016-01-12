@@ -17,10 +17,19 @@ a {
 .form{
   width: 100vw;
   height:9vh;
-  
+
 }
 
 .input{
   margin-left: 300px;
 
+}
+
+.image{
+  width: 100px;
+  height: 100px;
+}
+
+.image:hover{
+  opacity: .80;
 }
