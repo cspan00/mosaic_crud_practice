@@ -2,8 +2,14 @@ extends layout
 
 block content
   div.mosaic
+    if pictures
+      for image in pictures
+        p= image.id
+        img.image(src= image.image)
   div.form
     form.input(action='/' method ='post')
-      input(type='text' name='image' id='image_input' placeholder="paste image link")
-      button(type = 'submit') add image
+    input(type='text' name='image' id='image_input' placeholder="paste image link")
+    button(type = 'submit') add image
   
+    
+      
