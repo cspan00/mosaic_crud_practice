@@ -33,6 +33,12 @@ router.post('/', function(req, res, next){
 });
 
 
+router.get('/delete/:id', function(req, res, next){
+  getImages().where('id', req.params.id).del().then(function(result){
+    res.redirect('/')
+  })
+})
+
 
 
 module.exports = router;

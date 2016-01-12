@@ -4,7 +4,7 @@ block content
   div.mosaic
     if pictures
       for image in pictures
-        a(href='#')
+        a(href='/delete/'+image.id)
           img.image(src= image.image)
           span delete image
   div.form
