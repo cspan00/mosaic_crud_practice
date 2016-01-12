@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 var knex = require('knex')({
   client: 'pg',
   connection: 'postgres://localhost/mosaic'
@@ -7,6 +8,16 @@ var knex = require('knex')({
 
 function getImages(){
   return knex('pictures')
+}
+function validator(url){
+  var extension = url.substr(url.length - 3)
+
+  if(extension === 'jpg' || extension === 'png' || extension === 'gif'){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 
@@ -25,10 +36,13 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next){
   var image = req.body
+  if(validator(image.image)=== true)
   getImages().insert(image).then(function(result){
     res.redirect('/')
   })
-
+  else {
+    res.redirect('/')
+  }
 
 });
 
