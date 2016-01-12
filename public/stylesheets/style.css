@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.mosaic{
+  width: 100vw;
+  height: 90vh;
+
+
+}
+.form{
+  width: 100vw;
+  height:9vh;
+  
+}
+
+.input{
+  margin-left: 300px;
+
+}

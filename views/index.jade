@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  div.mosaic
+  div.form
+    form.input(action='/' method ='post')
+      input(type='text' name='image' id='image_input' placeholder="paste image link")
+      button(type = 'submit') add image
+  
